@@ -1,0 +1,420 @@
+/* ===== Variables base ===== */
+:root {
+  --primary-color: #0099cc;
+  --secondary-color: #ffcc00;
+  --accent-color: #ffffff;
+  --hover-color: #0077aa;
+  --background-color: #f2fbfd;
+  --text-color: #333;
+}
+
+/* ===== Reset y base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+header.hidden {
+  transform: translateY(-100%);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: var(--secondary-color);
+}
+
+.logo img {
+  height: 60px;
+}
+
+/* ===== Hero ===== */
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 90vh;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.5), 
+    rgba(0, 0, 0, 0.5)
+  ),
+  url("media/img.hero.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: var(--accent-color);
+  padding: 0 20px;
+}
+
+#hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+#hero button {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#hero button:hover {
+  background-color: var(--hover-color);
+  color: var(--accent-color);
+}
+
+/* Ocultar menú por defecto */
+header nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 70px; /* Ajusta si tu header es más alto */
+  right: 20px;
+  width: 180px;
+  background-color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+/* Mostrar menú cuando está activo */
+header nav.active {
+  display: flex;
+}
+
+/* Estilo de los enlaces del menú móvil */
+header nav a {
+  margin: 0.4rem 0;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Botón hamburguesa visible solo en móvil */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Esconder menú horizontal si no está activo */
+  header nav {
+    align-items: flex-start;
+  }
+}
+
+/* ===== Nosotros ===== */
+#somosya {
+  background: #fff;
+  padding: 60px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+#somosya h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.img-container {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.texto {
+  flex: 1;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.color-somos {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+/* ===== Habitaciones ===== */
+#productos {
+  background-color: var(--background-color);
+  padding: 60px 20px;
+}
+
+#productos h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+/* Scroll horizontal funcional */
+.habitacion {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 30px;
+  padding-bottom: 10px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.habitacion::-webkit-scrollbar {
+  height: 8px;
+}
+
+.habitacion::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.habitacion::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+}
+
+.carta {
+  flex: 0 0 300px;
+  max-width: 300px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.carta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.carta img {
+  border-radius: 10px;
+  margin-bottom: 15px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.carta p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+/* ===== Botón WhatsApp ===== */
+.btn-whatsapp {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.btn-whatsapp:hover {
+  background-color: var(--hover-color);
+  transform: scale(1.05);
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  text-align: center;
+  padding: 30px 10px;
+  font-size: 0.95rem;
+}
+
+footer i {
+  margin-right: 10px;
+}
+
+.socialnetwork {
+  margin-bottom: 10px;
+}
+
+.socialnetwork a {
+  margin: 0 10px;
+  font-size: 30px;
+  color: var(--accent-color);
+  transition: color 0.3s ease;
+}
+
+.socialnetwork a:hover {
+  color: var(--secondary-color);
+}
+
+/* ===== Responsive ===== */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  header nav {
+    display: none;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    left: 0;
+    padding: 10px 0;
+    z-index: 999;
+  }
+
+  header nav.active {
+    display: flex;
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  #somosya {
+    flex-direction: column;
+  }
+
+  .carta {
+    flex: 0 0 80vw;
+    max-width: 80vw;
+  }
+}
+
+.habitacion-slider {
+  position: relative;
+  overflow: hidden;
+  margin: 2rem auto;
+  padding: 1rem 0;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(0, 153, 204, 0.8);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-btn:hover {
+  background-color: var(--hover-color);
+}
+
+.scroll-btn.left {
+  left: 0;
+}
+
+.scroll-btn.right {
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .scroll-btn {
+    display: none;
+  }
+}

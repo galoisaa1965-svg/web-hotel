@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hotel Marsol - Tela, Honduras</title>
+  <link rel="icon" href="media/img.logo.jpeg">
+
+  <!-- Tipografía y estilos externos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Estilos locales -->
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="media/img.logo.jpeg" alt="Hotel Marsol Logo" />
+      </div>
+      <button class="menu-toggle" aria-label="Abrir menú de navegación"><i class="bi bi-list"></i></button>
+      <nav>
+        <a href="#hero">Inicio</a>
+        <a href="#somosya">Nosotros</a>
+        <a href="#sliderHabitaciones">Habitaciones</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero">
+    <h1>Bienvenidos al Hotel Marsol</h1>
+    <button onclick="window.location.href='reserva.html'">Reservar ahora</button>
+  </section>
+
+  <!-- Sección Nosotros -->
+  <section id="somosya">
+    <h2>Sobre Nosotros</h2>
+    <div class="img-container">
+      <img class="img" src="media/img.jpeg" alt="Hotel frente a la playa" />
+    </div>
+    <div class="texto">
+      <p>
+        <span class="color-somos">Hotel Marsol</span> es un paraíso frente al mar en <strong>Tela, Honduras</strong>. Nos dedicamos a ofrecer experiencias únicas con servicios de primera y un ambiente relajado para que disfrutes del Caribe como nunca.
+      </p>
+      <p>
+        Contamos con habitaciones cómodas, atención personalizada y acceso directo a la playa. ¡Tu descanso es nuestra prioridad!
+      </p>
+    </div>
+  </section>
+
+  <!-- Sección Habitaciones -->
+  <div class="habitacion-slider">
+    <button class="scroll-btn left" aria-label="Ver anteriores">&#10094;</button>
+
+    <div class="habitacion" id="sliderHabitaciones">
+      <!-- Cartas de habitaciones -->
+      <div class="carta">
+        <img src="media/img1.jpeg" alt="Habitación 1">
+        <p>Habitación con vista al mar</p>
+        <a href="https://wa.me/50499999999" class="btn-whatsapp" target="_blank">Reservar</a>
+      </div>
+      <div class="carta">
+        <img src="media/img2.jpeg" alt="Habitación 2">
+        <p>Habitación familiar con balcón</p>
+        <a href="https://wa.me/50499999999" class="btn-whatsapp" target="_blank">Reservar</a>
+      </div>
+      <div class="carta">
+        <img src="media/img3.jpeg" alt="Habitación 3">
+        <p>Habitación con vista al mar</p>
+        <a href="https://wa.me/50499999999" class="btn-whatsapp" target="_blank">Reservar</a>
+      </div>
+      <div class="carta">
+        <img src="media/img4.jpeg" alt="Habitación 4">
+        <p>Habitación familiar con balcón</p>
+        <a href="https://wa.me/50499999999" class="btn-whatsapp" target="_blank">Reservar</a>
+      </div>
+      <div class="carta">
+        <img src="media/img5.jpg" alt="Habitación 5">
+        <p>Habitación con vista al mar</p>
+        <a href="https://wa.me/50499999999" class="btn-whatsapp" target="_blank">Reservar</a>
+      </div>
+      <div class="carta">
+        <img src="media/img6.jpg" alt="Habitación 6">
+        <p>Habitación familiar con balcón</p>
+        <a href="https://wa.me/50499999999" class="btn-whatsapp" target="_blank">Reservar</a>
+      </div>
+    </div>
+
+    <button class="scroll-btn right" aria-label="Ver siguientes">&#10095;</button>
+  </div>
+
+  <!-- Contacto / Footer -->
+  <footer id="contacto">
+    <div class="socialnetwork">
+      <a href="#"><i class="bi bi-facebook"></i></a>
+      <a href="#"><i class="bi bi-instagram"></i></a>
+      <a href="#"><i class="bi bi-camera-reels"></i></a>
+    </div>
+    <p><i class="bi bi-whatsapp"></i> +504 9778-1626</p>
+    <p><i class="bi bi-mailbox"></i> contacto@hotelmarsol.com</p>
+    <p><i class="bi bi-clock"></i> Lunes a Domingo: 8am - 10pm</p>
+    <p>© 2025 Hotel Marsol. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- JavaScript principal -->
+  <script src="index.js"></script>
+
+  <!-- JavaScript del scroll horizontal de habitaciones -->
+  <script>
+    const slider = document.getElementById("sliderHabitaciones");
+    const btnLeft = document.querySelector(".scroll-btn.left");
+    const btnRight = document.querySelector(".scroll-btn.right");
+
+    const scrollAmount = 320; // ajustable según el diseño
+
+    btnLeft.addEventListener("click", () => {
+      slider.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    });
+
+    btnRight.addEventListener("click", () => {
+      slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    });
+  </script>
+
+  <!-- JavaScript del menú responsive -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector("header nav");
+
+      menuToggle.addEventListener("click", function () {
+        nav.classList.toggle("active");
+      });
+
+      const navLinks = nav.querySelectorAll("a");
+      navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+          nav.classList.remove("active");
+        });
+      });
+    });
+  </script>
+</body>
+</html
