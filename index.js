@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "50497781626";
+const WHATSAPP_NUMBER = "50432707995";
 
 document.addEventListener("DOMContentLoaded", () => {
   setupMenu();
