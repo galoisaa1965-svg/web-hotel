@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Habitación Vista al Mar - Hotel Marsol</title>
+  <link rel="icon" href="media/img.logo.jpeg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="index.css" />
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="index.html" class="logo" aria-label="Ir al inicio">
+        <img src="media/img.logo.jpeg" alt="Logo de Hotel Marsol" />
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <nav class="main-nav">
+        <a href="index.html#hero">Inicio</a>
+        <a href="index.html#nosotros">Nosotros</a>
+        <a href="index.html#habitaciones">Habitaciones</a>
+        <a href="reserva.html">Reservar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="room-detail">
+      <div class="container detail-card">
+        <img src="media/img4.jpeg" alt="Habitación Vista al Mar" class="detail-image" />
+
+        <div class="detail-content">
+          <span class="section-label">Habitación destacada</span>
+          <h1>Habitación Vista al Mar</h1>
+          <p>
+            Disfruta una experiencia relajante frente al mar Caribe con un ambiente fresco,
+            cómodo y pensado para descansar después de un día de playa.
+          </p>
+
+          <div class="details-grid">
+            <div><i class="bi bi-door-open"></i> 3 habitaciones disponibles</div>
+            <div><i class="bi bi-bathtub"></i> Baño privado</div>
+            <div><i class="bi bi-wifi"></i> Wifi gratuito</div>
+            <div><i class="bi bi-snow"></i> Aire acondicionado</div>
+          </div>
+
+          <p class="price">Precio por noche: L. 1,200</p>
+
+          <div class="button-group">
+            <a href="reserva.html" class="btn btn-primary">Reservar con formulario</a>
+            <a href="#" class="btn btn-whatsapp" data-room="Habitación Vista al Mar">Reservar por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><i class="bi bi-whatsapp"></i> +504 9778-1626</p>
+      <p>© 2026 Hotel Marsol - Tela, Honduras</p>
+    </div>
+  </footer>
+</body>
+</html>

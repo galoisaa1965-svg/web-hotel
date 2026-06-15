@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel Marsol - Tela, Honduras</title>
+  <link rel="icon" href="media/img.logo.jpeg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="index.css" />
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="index.html" class="logo" aria-label="Ir al inicio">
+        <img src="media/img.logo.jpeg" alt="Logo de Hotel Marsol" />
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <nav class="main-nav">
+        <a href="#hero">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#habitaciones">Habitaciones</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h1>Bienvenidos al Hotel Marsol</h1>
+        <p>Disfruta Tela, Honduras, con comodidad, playa y atención familiar.</p>
+        <a href="reserva.html" class="btn btn-primary">Reservar ahora</a>
+      </div>
+    </section>
+
+    <section id="nosotros" class="about-section">
+      <div class="container about-grid">
+        <div class="about-image">
+          <img src="media/img.jpg" alt="Instalaciones del Hotel Marsol frente a la playa" />
+        </div>
+
+        <div class="about-text">
+          <span class="section-label">Sobre nosotros</span>
+          <h2>Tu descanso frente al mar</h2>
+          <p>
+            <strong>Hotel Marsol</strong> es un espacio cómodo y tranquilo en Tela, Honduras.
+            Nos enfocamos en ofrecer una experiencia agradable para familias, parejas y viajeros
+            que quieren descansar cerca del Caribe.
+          </p>
+          <p>
+            Contamos con habitaciones cómodas, atención personalizada y un ambiente relajado
+            para que disfrutes tu estadía desde el primer momento.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="habitaciones" class="rooms-section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">Habitaciones</span>
+          <h2>Elige tu próxima estadía</h2>
+        </div>
+
+        <div class="rooms-track" id="sliderHabitaciones">
+  <article class="room-card">
+    <img src="media/img1.jpeg" alt="Habitación con vista al mar" />
+    <h3>Habitación Vista al Mar</h3>
+    <p>Habitación cómoda con vista al mar y ambiente relajante.</p>
+    <a href="habitacion1.html" class="btn btn-room">Ver habitación</a>
+  </article>
+
+  <article class="room-card">
+    <img src="media/img2.jpeg" alt="Habitación familiar con balcón" />
+    <h3>Suite Familiar</h3>
+    <p>Ideal para familias que buscan más espacio y comodidad.</p>
+    <a href="habitacion1.html" class="btn btn-room">Ver habitación</a>
+  </article>
+
+  <article class="room-card">
+    <img src="media/img3.jpeg" alt="Habitación doble cerca de la playa" />
+    <h3>Habitación Doble</h3>
+    <p>Perfecta para parejas o amigos durante una escapada a Tela.</p>
+    <a href="habitacion1.html" class="btn btn-room">Ver habitación</a>
+  </article>
+
+  <article class="room-card">
+    <img src="media/img4.jpeg" alt="Habitación con cama grande" />
+    <h3>Habitación King</h3>
+    <p>Descanso amplio, fresco y cómodo para una estadía especial.</p>
+    <a href="habitacion1.html" class="btn btn-room">Ver habitación</a>
+  </article>
+
+  <article class="room-card">
+    <img src="media/img5.jpg" alt="Habitación económica del hotel" />
+    <h3>Habitación Económica</h3>
+    <p>Una opción práctica y cómoda para viajes cortos.</p>
+    <a href="habitacion1.html" class="btn btn-room">Ver habitación</a>
+  </article>
+
+  <article class="room-card">
+    <img src="media/img6.jpg" alt="Habitación familiar amplia" />
+    <h3>Habitación Familiar</h3>
+    <p>Espacio pensado para compartir y descansar en familia.</p>
+    <a href="habitacion1.html" class="btn btn-room">Ver habitación</a>
+  </article>
+</div>
+
+          <button class="scroll-btn right" type="button" aria-label="Ver más habitaciones">
+            <i class="bi bi-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacto" class="site-footer">
+    <div class="container">
+      <div class="socialnetwork">
+        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="TikTok"><i class="bi bi-camera-reels"></i></a>
+      </div>
+
+      <p><i class="bi bi-whatsapp"></i> +504 9778-1626</p>
+      <p><i class="bi bi-envelope"></i> contacto@hotelmarsol.com</p>
+      <p><i class="bi bi-clock"></i> Lunes a Domingo: 8:00 a.m. - 10:00 p.m.</p>
+      <p>© 2026 Hotel Marsol. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
